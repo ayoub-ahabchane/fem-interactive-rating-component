@@ -10,6 +10,10 @@
 
   --fw-400: 400;
   --fw-500: 700;
+
+  --fs-title: 1.5rem;
+  --fs-body: 0.9rem;
+  --fs-icon: 0.6875rem;
 }
 
 /* RESET */
@@ -38,7 +42,7 @@ button {
 
 /* FRONT END MENTOR SPECIFIC */
 .attribution {
-  font-size: 11px;
+  font-size: var(--fs-icon);
   text-align: center;
   margin-top: 2rem;
 }
@@ -47,10 +51,13 @@ button {
 }
 
 /* TYPOGRAPHY */
+.card__title {
+  font-size: var(--fs-title);
+}
 
 .card__desc {
   color: var(--neutral-200);
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   line-height: 1.6;
 }
 
@@ -62,8 +69,7 @@ button {
 .button {
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 1rem;
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
 }
 
 /* LAYOUT */
@@ -75,6 +81,13 @@ main {
 
 /* COMPONENTS */
 
+.state {
+  display: grid;
+  align-content: center;
+  justify-content: stretch;
+  gap: 0.8em;
+  height: 100%;
+}
 .card {
   background-image: linear-gradient(
     150deg,
@@ -82,11 +95,9 @@ main {
     var(--neutral-500) 145%
   );
   width: min(90%, 21em);
+  min-height: 23.53125rem;
   margin-inline: auto;
-  display: grid;
-  justify-content: stretch;
   padding: 1.5em;
-  gap: 0.8em;
   border-radius: 1.2em;
 }
 
@@ -107,7 +118,7 @@ main {
   justify-content: center;
   align-items: center;
   line-height: 1;
-  font-size: 0.9rem;
+  font-size: var(--fs-body);
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
@@ -120,7 +131,7 @@ main {
 
 .decorative {
   display: inline-block;
-  width: 46px;
+  width: 40px;
   aspect-ratio: 1;
   background-color: var(--neutral-401);
   border-radius: 50%;
@@ -152,9 +163,56 @@ main {
   color: var(--primary-100);
 }
 
-/* add a "selected" class that gets toggled via javascript and gets applied on the rating */
+.decorative-img {
+  margin-inline: auto;
+  margin-bottom: 0.8em;
+  margin-top: 0.5em;
+}
+
+/* Modifiers */
 
 .rating-list__item.selected {
   background-color: var(--neutral-300);
   color: var(--neutral-100);
+}
+
+.button:disabled {
+  background-color: var(--neutral-401);
+  color: var(--neutral-300);
+  cursor: initial;
+}
+
+/* utilty */
+.centered {
+  text-align: center;
+}
+
+.margin-s {
+  margin-bottom: 1em;
+}
+
+.accent {
+  font-size: var(--fs-body);
+  color: var(--primary-100);
+  background-color: var(--neutral-401);
+  justify-self: center;
+  padding: 0.5em 0.9em;
+  border-radius: 2em;
+  margin-bottom: 1em;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

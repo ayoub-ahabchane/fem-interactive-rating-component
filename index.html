@@ -25,25 +25,27 @@
   <body>
     <main>
       <!-- Rating state start -->
-      <article class="card">
-        <p class="decorative">
-          <i class="uis uis-star"></i>
-        </p>
-        <h1 class="card__title">How did we do?</h1>
-        <p class="card__desc">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
+      <article id="rating-card" class="card">
+        <section class="state">
+          <p class="decorative">
+            <i class="uis uis-star"></i>
+          </p>
+          <h1 class="card__title">How did we do?</h1>
+          <p class="card__desc">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
 
-        <ul class="rating-list">
-          <li class="rating-list__item" data-grade="1">1</li>
-          <li class="rating-list__item" data-grade="2">2</li>
-          <li class="rating-list__item selected" data-grade="3">3</li>
-          <li class="rating-list__item" data-grade="4">4</li>
-          <li class="rating-list__item" data-grade="5">5</li>
-        </ul>
+          <ul class="rating-list">
+            <li class="rating-list__item" data-grade="1">1</li>
+            <li class="rating-list__item" data-grade="2">2</li>
+            <li class="rating-list__item" data-grade="3">3</li>
+            <li class="rating-list__item" data-grade="4">4</li>
+            <li class="rating-list__item" data-grade="5">5</li>
+          </ul>
 
-        <button id="submitRating" class="button">Submit</button>
+          <button id="submitRating" class="button" disabled>Submit</button>
+        </section>
       </article>
 
       <!-- Rating state end -->
