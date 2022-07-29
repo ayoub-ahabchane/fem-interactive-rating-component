@@ -1,0 +1,160 @@
+:root {
+  --primary-100: hsl(25, 97%, 53%);
+
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(217, 12%, 63%);
+  --neutral-300: hsl(216, 12%, 54%);
+  --neutral-400: hsl(213, 19%, 18%);
+  --neutral-401: hsla(216, 12%, 54%, 0.096);
+  --neutral-500: hsl(216, 12%, 8%);
+
+  --fw-400: 400;
+  --fw-500: 700;
+}
+
+/* RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* GLOBALS */
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--neutral-500);
+  color: var(--neutral-100);
+}
+
+button {
+  font-family: inherit;
+}
+
+/* FRONT END MENTOR SPECIFIC */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* TYPOGRAPHY */
+
+.card__desc {
+  color: var(--neutral-200);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.rating-list__item {
+  color: var(--neutral-300);
+  font-weight: var(--fw-500);
+}
+
+.button {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+/* LAYOUT */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+/* COMPONENTS */
+
+.card {
+  background-image: linear-gradient(
+    150deg,
+    var(--neutral-400) 0%,
+    var(--neutral-500) 145%
+  );
+  width: min(90%, 21em);
+  margin-inline: auto;
+  display: grid;
+  justify-content: stretch;
+  padding: 1.5em;
+  gap: 0.8em;
+  border-radius: 1.2em;
+}
+
+.rating-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.rating-list__item {
+  display: inline-block;
+  width: 43px;
+  aspect-ratio: 1;
+  background-color: var(--neutral-401);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.rating-list__item:hover,
+.rating-list__item:focus-visible {
+  color: var(--neutral-100);
+  background-color: var(--primary-100);
+}
+
+.decorative {
+  display: inline-block;
+  width: 46px;
+  aspect-ratio: 1;
+  background-color: var(--neutral-401);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin-bottom: 0.5em;
+}
+
+.decorative i {
+  color: var(--primary-100);
+  line-height: 1;
+}
+
+.button {
+  display: inline-block;
+  color: var(--neutral-100);
+  background-color: var(--primary-100);
+  border: unset;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--neutral-100);
+  color: var(--primary-100);
+}
+
+/* add a "selected" class that gets toggled via javascript and gets applied on the rating */
+
+.rating-list__item.selected {
+  background-color: var(--neutral-300);
+  color: var(--neutral-100);
+}

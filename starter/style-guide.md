@@ -29,5 +29,6 @@ The designs were created to the following widths:
 
 ### Font
 
-- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+- Family: [Overpass](https://fonts.google
+- .com/specimen/Overpass)
 - Weights: 400, 700
