@@ -53,6 +53,7 @@ button {
 /* TYPOGRAPHY */
 .card__title {
   font-size: var(--fs-title);
+  font-weight: var(--fw-500);
 }
 
 .card__desc {

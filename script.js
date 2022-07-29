@@ -30,7 +30,7 @@ submitButton.addEventListener("click", () => {
   alt="Decorative element"
 />
 <p class="accent centered">You selected ${rating} out of 5</p>
-<h1 class="card__title centered">Thank you!</h1>
+<p class="card__title centered">Thank you!</p>
 <p class="card__desc centered margin-s">
   We appreciate you taking the time to give a rating. If you ever need
   more support, don’t hesitate to get in touch!
