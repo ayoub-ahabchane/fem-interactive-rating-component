@@ -216,3 +216,14 @@ main {
     opacity: 1;
   }
 }
+
+@media (min-width: 378px) {
+  :root {
+    --fs-body: 0.9rem;
+  }
+
+  .card {
+    width: min(90%, 23em);
+    padding: 1.7rem;
+  }
+}
